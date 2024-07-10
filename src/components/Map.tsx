@@ -4,6 +4,7 @@ import "firebase/compat/firestore"
 import {fb} from "../firebase/firebase.ts"
 import {MarkerClusterer} from "@googlemaps/markerclusterer"
 import {Quest} from "../types/Quest.ts"
+import Button from "./Button.tsx"
 
 const center = {
     lat: 48.8584,
@@ -175,21 +176,7 @@ const Map: React.FC = () => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center'}}>
-            <button
-                style={{
-                    margin: '20px',
-                    padding: '12px 24px',
-                    fontSize: '18px',
-                    backgroundColor: '#007BFF',
-                    color: 'white',
-                    border: 'none',
-                    borderRadius: '4px',
-                    cursor: 'pointer',
-                }}
-                onClick={deleteAllQuests}
-            >
-                Delete All Quests
-            </button>
+            <Button name={"Delete All Quests"} onClickFunction={deleteAllQuests}/>
             <GoogleMap
                 mapContainerStyle={{ width: '100%', height: '100%', borderRadius: '8px' }}
                 zoom={8}
