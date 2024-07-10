@@ -2,7 +2,7 @@ import firebase from "firebase/compat/app"
 import "firebase/compat/firestore"
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDwls1vON_HIaKb3CqEgA3DSyI-EZAYuUg",
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
     authDomain: "test-task-viso-1dadb.firebaseapp.com",
     projectId: "test-task-viso-1dadb",
     storageBucket: "test-task-viso-1dadb.appspot.com",
